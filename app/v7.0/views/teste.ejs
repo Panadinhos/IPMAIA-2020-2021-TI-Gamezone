@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="date" content="start:28/12/2020 09:20" />
+    <meta name="keywords" content="gamezone_games" />
+    <meta name="description" content="games page" />
+    <link rel="stylesheet" href="gamezone.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1"
+      crossorigin="anonymous"
+    />
+    <title>Jogos</title>
+  </head>
+  <body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container-fluid">
+        <img src="https://iconarchive.com/download/i43063/oxygen-icons.org/oxygen/Devices-input-gaming.ico" alt="" width="30" height="24" class="d-inline-block align-left">
+        <a class="navbar-brand" href="/home">Gamezone</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarText">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" href="/eventos">Eventos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/perifericos">Periféricos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/plat">Plataformas</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/criadores">Criadores</a>
+            </li>
+          </ul>
+          <span class="navbar-text">
+            IPMAIA | TIWM | Tecnologias Internet | 2021
+          </span>
+        </div>
+      </div>
+    </nav>
+    <main>
+        </script>
+        <script src="vendor/js/jquery-3.1.1.min.js"></script>
+        <script type="text/javascript" src="teasers.js"></script>
+            <% for (var i in data) { %>
+                    <div class= 'cards'>
+                      <div class="cardsection">
+                        <div class="card shadow" style="width: 18rem;">
+                          <div class="grid-container">
+                            <div class="inner">
+                              <img src="<%=data[i]['img'][0]%>" class="card-img-top"/>
+                            </div>
+                            <div class="card-body">
+                              <h5 class="card-title">
+                                  <%= data[i]["title"][0] %>
+                              </h5>
+                              <p class="card-text justify-content-center">
+                                <%= data[i]["sinopse"][0] %>
+                                <br>                                
+                              </p>
+                              <p class="cardplat">
+                                <strong>Plataformas: </strong> <%= data[i]["platforms"][0] %>
+                                <br>
+                              </p>
+                              <a href="#" class="btn btn-primary" id="btn" onclick="window.open('<%= data[i]["teaser"][0] %>')">Ver teaser</a>
+                            </div>
+                          </div>
+                        </div>
+              <% } %>
+            </div>
+    </main>
+  </body>
+</html>
