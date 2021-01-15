@@ -1,4 +1,4 @@
-# GamezoneTI
+# TI-gamezone-2020
 Trabalho no âmbito da disciplina Tecnologias Internet , TIWM , IPMAIA 20/21. Desenvolvido por  _Miguel André_ [@Panadinhos](https://github.com/Panadinhos).
 
 ## Descrição 
