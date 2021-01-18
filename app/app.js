@@ -11,7 +11,7 @@ parser.parseString(stringgg, (err, d) => {
 
     app.set('view engine', 'ejs')
 
-    app.use(express.static(__dirname + '/views'))
+    app.use(express.static(__dirname + '/'))
 
     app.get('/jogos', function (req, res) {
         res.render('jogos',{data:d["gamezone"]["games"][0]["game"]});
