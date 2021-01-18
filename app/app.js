@@ -17,6 +17,10 @@ parser.parseString(stringgg, (err, d) => {
         res.render('jogos',{data:d["gamezone"]["games"][0]["game"]});
     })
 
+    app.post('/jogos', function (req, res) {
+        res.render('perifericos',{data:d["gamezone"]["peripherals"][0]});
+    })
+
     app.get('/perifericos', function (req, res) {
         res.render('perifericos',{data:d["gamezone"]["peripherals"][0]});
     })
