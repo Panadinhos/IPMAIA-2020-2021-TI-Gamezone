@@ -28,8 +28,8 @@
                       <strong>Plataformas: </strong> <%= data[i]["platforms"][0] %>
                       <br>
                     </p>
-                    <a href="#" class="btn btn-primary" id="btn" onclick="window.open('<%= data[i]["teaser"][0] %>')">Ver teaser</a>
-                    
+                    <a class="btn btn-primary" id="btn" onclick="window.open('<%= data[i]["teaser"][0] %>')">Ver teaser</a>
+                    <a class="btn btn-info" name="name" href="/jogos/<%= data[i]["title"][0] %>">Detalhes</a>
                   </div>
                 </div>
               </div>

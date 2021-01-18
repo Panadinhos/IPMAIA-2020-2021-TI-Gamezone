@@ -13,12 +13,12 @@ parser.parseString(stringgg, (err, d) => {
 
     app.use(express.static(__dirname + '/'))
 
-    app.get('/jogos', function (req, res) {
-        res.render('jogos',{data:d["gamezone"]["games"][0]["game"]});
+    app.get('/jogos/:nome', function (req, res) {
+        res.render('jogo',{data:d["gamezone"]["games"][0]["game"],nome:req.params.nome});
     })
 
-    app.post('/jogos', function (req, res) {
-        res.render('perifericos',{data:d["gamezone"]["peripherals"][0]});
+    app.get('/jogos', function (req, res) {
+        res.render('jogos',{data:d["gamezone"]["games"][0]["game"]});
     })
 
     app.get('/perifericos', function (req, res) {
