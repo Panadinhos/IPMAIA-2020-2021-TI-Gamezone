@@ -21,6 +21,20 @@ parser.parseString(stringgg, (err, d) => {
         res.render('jogos',{data:d["gamezone"]["games"][0]["game"]});
     })
 
+    app.get('/perifericos/:tipo/:nome', function (req, res) {
+        if (req.params.tipo==="desktop"){
+            res.render('perifericos',{desktop:d["gamezone"]["peripherals"][0]["desktop"]});
+        } else if (req.params.tipo==="headset") {
+          res.render('perifericos',{monitor:d["gamezone"]["peripherals"][0]["monitor"]});
+        } else if (req.params.tipo==="keyboard") {
+          res.render('perifericos',{keyboard:d["gamezone"]["peripherals"][0]["keyboard"]});
+        } else if (req.params.tipo==="monitor") {
+          res.render('perifericos',{monitor:d["gamezone"]["peripherals"][0]["monitor"]});
+        } else if (req.params.tipo==="mouse") {
+          res.render('perifericos',{mouse:d["gamezone"]["peripherals"][0]["mouse"]});
+        }
+    })
+
     app.get('/perifericos', function (req, res) {
         res.render('perifericos',{desktop:d["gamezone"]["peripherals"][0]["desktop"],monitor:d["gamezone"]["peripherals"][0]["monitor"],keyboard:d["gamezone"]["peripherals"][0]["keyboard"],mouse:d["gamezone"]["peripherals"][0]["mouse"],headset:d["gamezone"]["peripherals"][0]["headset"]});
     })
