@@ -1,5 +1,4 @@
-
-  <% for (var i in desktop) { %>
+  <% for (var i in keyboard) { %>
     <div class="col-sm-12 col-md-6 col-lg-4 col-xl-3 d-flex align-items-stretch">
       <div class="card shadow" style="width: 18rem;">
         <div class="container">
@@ -8,19 +7,19 @@
           </div>
           <div class="card-body">
             <h5 class="card-title">
-                <%= desktop[i]["name"][0] %>
+                <%= keyboard[i]["name"][0] %>
             </h5>
             <p class="card-text">
-              <strong>CPU: </strong>
-              <%= desktop[i]["cpu"][0] %>
+              <strong>Layout: </strong>
+              <%= keyboard[i]["layout"][0] %>
               <br>
             </p>
             <p class="cardplat">
-              <strong>Marca: </strong> <%= desktop[i]["brand"][0] %>
+              <strong>Marca: </strong> <%= keyboard[i]["brand"][0] %>
               <br>
-              <strong>Preco: </strong> <%= desktop[i]["price"][0] %>
+              <strong>Preco: </strong> <%= keyboard[i]["price"][0] %>
             </p>
-            <a class="btn btn-primary" name="name" href="/jogos/<%= desktop[i]["name"][0] %>">Detalhes</a>
+            <a class="btn btn-primary" name="name" href="/jogos/<%= keyboard[i]["name"][0] %>">Detalhes</a>
           </div>
         </div>
       </div>
