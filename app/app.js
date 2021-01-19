@@ -22,7 +22,7 @@ parser.parseString(stringgg, (err, d) => {
     })
 
     app.get('/perifericos', function (req, res) {
-        res.render('perifericos',{desktop:d["gamezone"]["peripherals"][0]["desktop"],monitor:d["gamezone"]["peripherals"][0]["monitor"],keyboard:d["gamezone"]["peripherals"][0]["keyboard"]});
+        res.render('perifericos',{desktop:d["gamezone"]["peripherals"][0]["desktop"],monitor:d["gamezone"]["peripherals"][0]["monitor"],keyboard:d["gamezone"]["peripherals"][0]["keyboard"],mouse:d["gamezone"]["peripherals"][0]["mouse"],headset:d["gamezone"]["peripherals"][0]["headset"]});
     })
 
     app.get('/plat', function (req, res) {
