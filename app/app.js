@@ -5,7 +5,7 @@ const xml2js = require('xml2js');
 const parser = new xml2js.Parser({ attrkey: "ATTR" });
 
 var stringgg = fs.readFileSync('data/gamezone.xml', 'utf-8')
-parser.parseString(stringgg, (err, d) => {
+parser.parseString(stringgg, async (err, d) => {
   if (err === null) {
     console.log(d["gamezone"]["games"][0]["game"][0]["title"][0]);
 
@@ -21,9 +21,9 @@ parser.parseString(stringgg, (err, d) => {
         res.render('jogos',{data:d["gamezone"]["games"][0]["game"]});
     })
 
-    app.get('/perifericos/:tipo/:nome', function (req, res) {
+    app.get('/perifericos/:tipo/:nome', async function (req, res) {
         if (req.params.tipo==="desktop"){
-            res.render('perifericos',{data:d["gamezone"]["peripherals"][0]["desktop"],nome:req.params.nome,tipo:req.params.tipo});
+            res.render('desktop',{data:d["gamezone"]["peripherals"][0]["desktop"],nome:req.params.nome,tipo:req.params.tipo});
         } else if (req.params.tipo==="headset") {
           res.render('perifericos',{data:d["gamezone"]["peripherals"][0]["headset"],nome:req.params.nome,tipo:req.params.tipo});
         } else if (req.params.tipo==="keyboard") {
