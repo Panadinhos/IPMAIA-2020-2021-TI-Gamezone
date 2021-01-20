@@ -23,15 +23,15 @@ parser.parseString(stringgg, (err, d) => {
 
     app.get('/perifericos/:tipo/:nome', function (req, res) {
         if (req.params.tipo==="desktop"){
-            res.render('perifericos',{desktop:d["gamezone"]["peripherals"][0]["desktop"]});
+            res.render('perifericos',{data:d["gamezone"]["peripherals"][0]["desktop"],nome:req.params.nome,tipo:req.params.tipo});
         } else if (req.params.tipo==="headset") {
-          res.render('perifericos',{monitor:d["gamezone"]["peripherals"][0]["monitor"]});
+          res.render('perifericos',{data:d["gamezone"]["peripherals"][0]["headset"],nome:req.params.nome,tipo:req.params.tipo});
         } else if (req.params.tipo==="keyboard") {
-          res.render('perifericos',{keyboard:d["gamezone"]["peripherals"][0]["keyboard"]});
+          res.render('perifericos',{data:d["gamezone"]["peripherals"][0]["keyboard"],nome:req.params.nome,tipo:req.params.tipo});
         } else if (req.params.tipo==="monitor") {
-          res.render('perifericos',{monitor:d["gamezone"]["peripherals"][0]["monitor"]});
+          res.render('perifericos',{data:d["gamezone"]["peripherals"][0]["monitor"],nome:req.params.nome,tipo:req.params.tipo});
         } else if (req.params.tipo==="mouse") {
-          res.render('perifericos',{mouse:d["gamezone"]["peripherals"][0]["mouse"]});
+          res.render('perifericos',{data:d["gamezone"]["peripherals"][0]["mouse"],nome:req.params.nome,tipo:req.params.tipo});
         }
     })
 
