@@ -1,6 +1,13 @@
-body{
-  background-image: url('https://i.pinimg.com/736x/d0/13/05/d01305e0cb08611774a41c7328400c84--d-pattern-white-patterns.jpg')!important;
+#background {
+  background-image: url('https://i.pinimg.com/736x/d0/13/05/d01305e0cb08611774a41c7328400c84--d-pattern-white-patterns.jpg');
   background-repeat: repeat;
+  opacity: 0.5;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;
 }
 
 .card text{
