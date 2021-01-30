@@ -1,5 +1,7 @@
 const express = require('express');
+const serverless = require("serverless-http");
 const app = express();
+const router = express.Router();
 const fs = require('fs');
 const xml2js = require('xml2js');
 const parser = new xml2js.Parser({ attrkey: "ATTR" });
@@ -62,8 +64,6 @@ parser.parseString(stringgg, async (err, d) => {
 });
 
 
+app.use('/.netlify/functions/api',router);
 
-
-app.listen(8080, () => {
-    console.log('A OUVIR NO PORTO 8080')
-})
+module.exports.handler = serverless(app);

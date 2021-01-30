@@ -1,26 +1,29 @@
 {
-  "name": "gamezone",
-  "version": "10.0.0",
-  "description": "Ejs mais aproveitado",
+  "name": "ipmaia-2020-2021-ti-gamezone-main",
+  "version": "1.0.0",
+  "description": "",
   "main": "app.js",
+  "dependencies": {
+    "ejs": "^3.1.5",
+    "express": "^4.17.1",
+    "fs": "^0.0.1-security",
+    "netlify-lambda": "^2.0.3",
+    "nodemon": "^2.0.7",
+    "serverless-http": "^2.7.0",
+    "xml2js": "^0.4.23"
+  },
+  "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node app.js"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Panadinhos/IPMAIA-2020-2021-TI-Gamezone.git"
   },
-  "author": "",
+  "author": "Panadinhos",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/Panadinhos/IPMAIA-2020-2021-TI-Gamezone/issues"
   },
-  "homepage": "https://github.com/Panadinhos/IPMAIA-2020-2021-TI-Gamezone#readme",
-  "dependencies": {
-    "ejs": "^3.1.5",
-    "express": "^4.17.1",
-    "fs": "0.0.1-security",
-    "nodemon": "^2.0.7",
-    "xml2js": "^0.4.23"
-  }
+  "homepage": "https://github.com/Panadinhos/IPMAIA-2020-2021-TI-Gamezone#readme"
 }
